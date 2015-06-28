@@ -1,4 +1,135 @@
+@font-face {
+  font-family: oswald;
+  src: url(Oswald-Stencil.ttf); }
+@font-face {
+  font-family: oswald-normal;
+  src: url(Oswald-Light.ttf); }
 body {
-  color: red; }
+  background-color: #FDF3E7;
+  margin: 0; }
+  body a {
+    padding: 5px;
+    color: inherit; }
+    body a:visited {
+      color: inherit; }
+  body div.background {
+    position: absolute;
+    display: block; }
+    body div.background.light {
+      background-color: #FDF3E7; }
+    body div.background.dark {
+      background-color: #3B3738; }
+  body header {
+    background-color: #FDF3E7;
+    height: 155px;
+    overflow: hidden;
+    display: block;
+    text-align: left;
+    margin: 0; }
+    body header * {
+      cursor: default; }
+    body header:hover div.avatar {
+      border-radius: 25px; }
+    body header:hover .title h1.firstname {
+      color: #FDF3E7; }
+    body header:hover .title h1.sername {
+      padding-left: 0px;
+      color: #3B3738; }
+    body header:hover div.background-orange {
+      transform: rotate(0deg); }
+    body header:hover div.background-orange-first {
+      transform: rotate(0deg); }
+    body header div.avatar {
+      margin: 10px;
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      border-radius: 50px;
+      background-image: url("avatar.jpg");
+      position: relative;
+      z-index: 10;
+      transition: all 0.5s ease; }
+    body header .title {
+      width: calc(100% - 150px);
+      display: inline-block;
+      vertical-align: top;
+      text-align: left; }
+      body header .title h1 {
+        position: relative;
+        z-index: 10;
+        display: inline-block;
+        margin-bottom: 0;
+        transition: all 0.5s ease;
+        color: #f38661;
+        font-family: 'oswald'; }
+        body header .title h1.sername {
+          padding-left: 10px; }
+    body header div.background-orange {
+      height: 150px;
+      width: 120%;
+      display: block;
+      transform: rotate(-5deg);
+      background-color: #C63D0F;
+      margin-left: -20px;
+      margin-top: -160px;
+      transition: all 0.5s ease; }
+    body header div.background-orange-first {
+      height: 60px;
+      width: 120%;
+      display: block;
+      transform: rotate(-5deg);
+      background-color: darkred;
+      margin-left: -20px;
+      margin-top: -45px;
+      transition: all 0.5s ease; }
+      body header div.background-orange-first h4 {
+        margin: 0;
+        padding-top: 10px;
+        position: relative;
+        z-index: 10;
+        padding-left: 145px;
+        transition: all 0.5s ease; }
+  body div.content {
+    display: block;
+    background-color: #FDF3E7; }
+    body div.content div.links {
+      margin: 20px;
+      display: block;
+      vertical-align: middle; }
+      body div.content div.links a {
+        display: block;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        border-radius: 25px;
+        margin: 5px; }
+        body div.content div.links a div.image {
+          display: inline-block;
+          width: 100px;
+          height: 100px;
+          border-radius: 50px;
+          transition: all 0.2s ease;
+          vertical-align: middle; }
+        body div.content div.links a span {
+          font-family: 'oswald-normal';
+          display: inline-block;
+          text-align: center;
+          width: calc(100% - 150px);
+          font-size: 20px;
+          vertical-align: middle; }
+        body div.content div.links a div.proj {
+          background-image: url("proj.png"); }
+        body div.content div.links a div.auto {
+          background-image: url("auto.png"); }
+        body div.content div.links a div.blog {
+          background-image: url("blog.png"); }
+        body div.content div.links a div.contact {
+          background-image: url("contact.png"); }
+        body div.content div.links a:hover {
+          background-color: #f3b871; }
+          body div.content div.links a:hover div.image {
+            border-radius: 25px; }
+  body #container {
+    width: 100%;
+    overflow: hidden; }
 
 /*# sourceMappingURL=mywebcv.css.map */
