@@ -1,6 +1,5 @@
-$color-orange: #C63D0F;
-$color-light: #FDF3E7;
-$color-dark: #3B3738;
+$color-primary: #558C89;
+$color-secondary: #D9853B;
 
 @font-face {
   font-family: oswald;
@@ -11,9 +10,7 @@ $color-dark: #3B3738;
   src: url(Oswald-Light.ttf);
 }
 
-
 body{
-  background-color:$color-light;
   margin:0;
   a{
     padding:5px;
@@ -22,18 +19,7 @@ body{
       color:inherit;
     }
   }
-  div.background{
-    position:absolute;
-    display:block;
-    &.light{
-      background-color: $color-light;
-    }
-    &.dark{
-      background-color: $color-dark;
-    }
-  }
   header {
-    background-color:$color-light;
     height:155px;
     overflow:hidden;
     *{
@@ -49,21 +35,19 @@ body{
       .title{
         h1{
           &.firstname{
-            color:$color-light;
+            color:white;
           }
           &.sername{
             padding-left:0px;
-            color:$color-dark;
+            color:black;
           }
         }
       }
-      div.background-orange{
+      div.header-background1{
         transform:rotate(0deg);
       }
-      div.background-orange-first {
+      div.header-background2 {
         transform:rotate(0deg);
-        h4{
-        }
       }
     }
     div.avatar {
@@ -88,7 +72,7 @@ body{
         display: inline-block;
         margin-bottom:0;
         transition:all 0.5s ease;
-        color:lighten($color-orange, 25%);
+        color:lighten($color-secondary, 25%);
         font-family:'oswald';
         &.firstname{
         }
@@ -97,22 +81,22 @@ body{
         }
       }
     }
-    div.background-orange{
+    div.header-background1{
       height:150px;
       width:120%;
       display:block;
       transform:rotate(-5deg);
-      background-color:$color-orange;
+      background-color:$color-primary;
       margin-left:-20px;
       margin-top:-160px;
       transition:all 0.5s ease;
     }
-    div.background-orange-first{
+    div.header-background2{
       height:60px;
       width:120%;
       display:block;
       transform:rotate(-5deg);
-      background-color:darkred;
+      background-color:$color-secondary;
       margin-left:-20px;
       margin-top:-45px;
       transition:all 0.5s ease;
@@ -123,17 +107,18 @@ body{
         z-index:10;
         padding-left:145px;
         transition:all 0.5s ease;
+        font-family:'oswald-normal';
       }
     }
   }
   div.content {
     display:block;
-    background-color:$color-light;
     div.links {
       margin:20px;
       display: block;
       vertical-align:middle;
       a {
+        max-width:480px;
         display: block;
         text-decoration: none;
         transition: all 0.2s ease;
@@ -157,20 +142,36 @@ body{
         }
         div.proj{
           background-image: url('proj.png');
+          -webkit-filter: grayscale(100%);
         }
         div.auto{
           background-image: url('auto.png');
+          -webkit-filter: grayscale(100%);
         }
         div.blog{
           background-image: url('blog.png');
+          -webkit-filter: grayscale(100%);
         }
         div.contact{
           background-image: url('contact.png');
+          -webkit-filter: grayscale(100%);
         }
         &:hover{
-          background-color:darken($color-light, 25%);
+          background-color:lighten($color-primary, 25%);
           div.image{
             border-radius:25px;
+          }
+          div.auto{
+            -webkit-filter: grayscale(0%);
+          }
+          div.proj{
+            -webkit-filter: grayscale(0%);
+          }
+          div.contact{
+            -webkit-filter: grayscale(0%);
+          }
+          div.blog{
+            -webkit-filter: grayscale(0%);
           }
         }
       }

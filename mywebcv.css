@@ -5,22 +5,13 @@
   font-family: oswald-normal;
   src: url(Oswald-Light.ttf); }
 body {
-  background-color: #FDF3E7;
   margin: 0; }
   body a {
     padding: 5px;
     color: inherit; }
     body a:visited {
       color: inherit; }
-  body div.background {
-    position: absolute;
-    display: block; }
-    body div.background.light {
-      background-color: #FDF3E7; }
-    body div.background.dark {
-      background-color: #3B3738; }
   body header {
-    background-color: #FDF3E7;
     height: 155px;
     overflow: hidden;
     display: block;
@@ -31,13 +22,13 @@ body {
     body header:hover div.avatar {
       border-radius: 25px; }
     body header:hover .title h1.firstname {
-      color: #FDF3E7; }
+      color: white; }
     body header:hover .title h1.sername {
       padding-left: 0px;
-      color: #3B3738; }
-    body header:hover div.background-orange {
+      color: black; }
+    body header:hover div.header-background1 {
       transform: rotate(0deg); }
-    body header:hover div.background-orange-first {
+    body header:hover div.header-background2 {
       transform: rotate(0deg); }
     body header div.avatar {
       margin: 10px;
@@ -60,43 +51,44 @@ body {
         display: inline-block;
         margin-bottom: 0;
         transition: all 0.5s ease;
-        color: #f38661;
+        color: #eec7a6;
         font-family: 'oswald'; }
         body header .title h1.sername {
           padding-left: 10px; }
-    body header div.background-orange {
+    body header div.header-background1 {
       height: 150px;
       width: 120%;
       display: block;
       transform: rotate(-5deg);
-      background-color: #C63D0F;
+      background-color: #558C89;
       margin-left: -20px;
       margin-top: -160px;
       transition: all 0.5s ease; }
-    body header div.background-orange-first {
+    body header div.header-background2 {
       height: 60px;
       width: 120%;
       display: block;
       transform: rotate(-5deg);
-      background-color: darkred;
+      background-color: #D9853B;
       margin-left: -20px;
       margin-top: -45px;
       transition: all 0.5s ease; }
-      body header div.background-orange-first h4 {
+      body header div.header-background2 h4 {
         margin: 0;
         padding-top: 10px;
         position: relative;
         z-index: 10;
         padding-left: 145px;
-        transition: all 0.5s ease; }
+        transition: all 0.5s ease;
+        font-family: 'oswald-normal'; }
   body div.content {
-    display: block;
-    background-color: #FDF3E7; }
+    display: block; }
     body div.content div.links {
       margin: 20px;
       display: block;
       vertical-align: middle; }
       body div.content div.links a {
+        max-width: 480px;
         display: block;
         text-decoration: none;
         transition: all 0.2s ease;
@@ -117,17 +109,29 @@ body {
           font-size: 20px;
           vertical-align: middle; }
         body div.content div.links a div.proj {
-          background-image: url("proj.png"); }
+          background-image: url("proj.png");
+          -webkit-filter: grayscale(100%); }
         body div.content div.links a div.auto {
-          background-image: url("auto.png"); }
+          background-image: url("auto.png");
+          -webkit-filter: grayscale(100%); }
         body div.content div.links a div.blog {
-          background-image: url("blog.png"); }
+          background-image: url("blog.png");
+          -webkit-filter: grayscale(100%); }
         body div.content div.links a div.contact {
-          background-image: url("contact.png"); }
+          background-image: url("contact.png");
+          -webkit-filter: grayscale(100%); }
         body div.content div.links a:hover {
-          background-color: #f3b871; }
+          background-color: #9dc4c1; }
           body div.content div.links a:hover div.image {
             border-radius: 25px; }
+          body div.content div.links a:hover div.auto {
+            -webkit-filter: grayscale(0%); }
+          body div.content div.links a:hover div.proj {
+            -webkit-filter: grayscale(0%); }
+          body div.content div.links a:hover div.contact {
+            -webkit-filter: grayscale(0%); }
+          body div.content div.links a:hover div.blog {
+            -webkit-filter: grayscale(0%); }
   body #container {
     width: 100%;
     overflow: hidden; }
